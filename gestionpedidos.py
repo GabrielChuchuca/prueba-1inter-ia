@@ -41,6 +41,8 @@ def creacion_base():
     conn = sqlite3.connect("BASEDATOSIA")
     curs = conn.cursor()
     #curs.execute("CREATE TABLE CLIENTES (NOMBRE VARCHAR(75), DIRECCION VARCHAR(200), TELEFONO VARCHAR(10), EMAIL VARCHAR(75))")
+    #curs.execute("create table if not exists CLIENTE(id integer primary key autoincrement,nombre varchar(100) not null,direccion varchar(100) not null,telefono varchar(10) not null,correo varchar(150) not null);")
+    #curs.execute("create table if not exists CUENTA(id integer primary key autoincrement, id_cliente integer, valor integer, num_tarjeta varchar(50) not null, foreign key(id_cliente) references cliente(id));")
     conn.close()
 
 
